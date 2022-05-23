@@ -2,6 +2,11 @@
   <h1>Bienvenido a mi campo de pruebas de {{title}}</h1>
   <p>Angular para dummies y experimentos</p>
 
-  <videojuego></videojuego>
+  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos"> ocultar videojuegos</button>
+  <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos"> mostrar videojuegos</button>
+
+
+  <videojuego *ngIf="mostrar_videojuegos"></videojuego>
   <zapatillas></zapatillas>
+  <cursos></cursos>
 </div>
