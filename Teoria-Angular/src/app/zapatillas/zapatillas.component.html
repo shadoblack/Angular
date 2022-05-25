@@ -1,4 +1,36 @@
-<h2>{{titulo}}</h2>
+<h2>{{ titulo }}</h2>
+<p>Compra primeras marcas en Zapatillas</p>
 <ul>
-  <li *ngFor="let zapatilla of zapatillas">{{zapatilla.nombre}} - <strong>{{zapatilla.precio}}</strong></li>
+  <li *ngFor="let marca of marcas">{{ marca }}</li>
+</ul>
+<p>tenemos disponibles los siguientes productos:</p>
+<ul>
+  <li *ngFor="let zapatilla of zapatillas">
+    {{ zapatilla.nombre }} - <strong>{{ zapatilla.precio }}€</strong>
+    <div *ngIf="!zapatilla.stock">
+      {{ zapatilla.nombre }} - <strong></strong>
+      <span
+        *ngIf="zapatilla.precio <= 100"
+        [style.background]="zapatilla.precio <= 100 ? 'green' : 'transparent'"
+      >
+        ¡¡EN OFERTA!!</span
+      >
+    </div>
+  </li>
+</ul>
+
+<p>El color de la mayoria de nuestras zapatillas es:</p>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'yellow'">
+    el color predominante es el<span style="background: yellow"> amarillo</span>
+  </li>
+  <li *ngSwitchCase="'red'">
+    el color predominante es el <span style="background: red"> rojo</span>
+  </li>
+  <li *ngSwitchCase="'blue'">
+    el color predominante es el <span style="background: blue"> azul</span>
+  </li>
+  <li *ngSwitchCase="'orange'">
+    el color predominante es el <span style="background: orange"> naranja</span>
+  </li>
 </ul>
