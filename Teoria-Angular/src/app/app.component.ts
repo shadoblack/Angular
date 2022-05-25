@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { configuracion } from './models/configuracion';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public title = 'Teoria-Angular';
   public mostrar_videojuegos: boolean = true;
+  public descripcion: string;
+
+  constructor(){
+    this.title = configuracion.titulo;
+    this.descripcion = configuracion.descripcion;
+  }
 
   ocultarVideojuegos(value: boolean){
     this.mostrar_videojuegos = value;
