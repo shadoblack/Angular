@@ -1,4 +1,14 @@
 <h2>{{ titulo }}</h2>
+
+<p>Añadir marca</p>
+<p>
+<input type="text" [(ngModel)]="mi_marca" />
+<button (click)="getMarca()"> mostrar marca</button>
+<button (click)="addMarca()"> añadir marca</button>
+
+</p>
+<p><strong>{{mi_marca}}</strong></p>
+
 <p>Compra primeras marcas en Zapatillas</p>
 <ul>
   <li *ngFor="let marca of marcas">{{ marca }}</li>
@@ -20,6 +30,7 @@
 </ul>
 
 <p>El color de la mayoria de nuestras zapatillas es:</p>
+<input type="text" [(ngModel)]="color" />
 <ul [ngSwitch]="color">
   <li *ngSwitchCase="'yellow'">
     el color predominante es el<span style="background: yellow"> amarillo</span>
