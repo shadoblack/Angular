@@ -2,7 +2,7 @@
 
 <p>Añadir marca</p>
 <p>
-<input type="text" [(ngModel)]="mi_marca" />
+<input type="text" [(ngModel)]="mi_marca" (keyup.enter)="mostrarPalabra()"/>
 <button (click)="getMarca()"> mostrar marca</button>
 <button (click)="addMarca()"> añadir marca</button>
 
@@ -47,3 +47,4 @@
     el color predominante es el <span style="background: orange"> naranja</span>
   </li>
 </ul>
+

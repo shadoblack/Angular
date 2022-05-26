@@ -48,6 +48,13 @@ export class ZapatillasComponent implements OnInit{
     this.marcas.push(this.mi_marca);
   }
   borrarMarca(index: number){
-    delete this.marcas[index];
+    //delete this.marcas[index];
+    this.marcas.splice(index,1);
+  }
+  onBlur(){
+    console.log("has salido del input")
+  }
+  mostrarPalabra(){
+    alert(this.mi_marca);
   }
 }
