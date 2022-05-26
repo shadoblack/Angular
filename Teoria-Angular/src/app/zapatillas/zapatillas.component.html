@@ -18,7 +18,8 @@
 <p>tenemos disponibles los siguientes productos:</p>
 <ul>
   <li *ngFor="let zapatilla of zapatillas">
-    {{ zapatilla.nombre }} - <strong>{{ zapatilla.precio }}€</strong>
+    {{ zapatilla.nombre }} - <strong [class.altoPrecio]="zapatilla.precio>100"
+      >{{ zapatilla.precio }}€</strong>
     <div *ngIf="!zapatilla.stock">
       {{ zapatilla.nombre }} - <strong></strong>
       <span
