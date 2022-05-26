@@ -11,7 +11,9 @@
 
 <p>Compra primeras marcas en Zapatillas</p>
 <ul>
-  <li *ngFor="let marca of marcas">{{ marca }}</li>
+  <li *ngFor="let marca of marcas; let indice = index">{{ indice + ' - ' + marca }}
+    <button (click)="borrarMarca(indice)">Borrar</button>
+  </li>
 </ul>
 <p>tenemos disponibles los siguientes productos:</p>
 <ul>
