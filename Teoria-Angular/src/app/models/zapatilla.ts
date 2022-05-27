@@ -13,6 +13,8 @@ export class Zapatilla {
   //   this.stock = stock;
   // }
 //abreviar en TS al formato de abajo.
+
+//constructor VVVVVV
   constructor(
     public nombre: string,
     public marca: string,
