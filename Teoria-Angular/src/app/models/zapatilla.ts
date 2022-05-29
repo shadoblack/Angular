@@ -14,7 +14,7 @@ export class Zapatilla {
   // }
 //abreviar en TS al formato de abajo.
 
-//constructor VVVVVV
+//constructor VVVVVVVVVVVV
   constructor(
     public nombre: string,
     public marca: string,
