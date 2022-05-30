@@ -10,8 +10,15 @@ exports.HomeComponent = void 0;
 var core_1 = require("@angular/core");
 var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
+        this.identificado = false;
     }
     HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent.prototype.setIdentificado = function () {
+        this.identificado = true;
+    };
+    HomeComponent.prototype.unsetIdentificado = function () {
+        this.identificado = false;
     };
     HomeComponent = __decorate([
         (0, core_1.Component)({
