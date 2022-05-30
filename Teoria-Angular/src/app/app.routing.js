@@ -13,6 +13,8 @@ var appRoutes = [
     { path: 'zapatillas', component: zapatillas_component_1.ZapatillasComponent },
     { path: 'videojuego', component: videojuego_component_1.VideojuegoComponent },
     { path: 'cursos', component: cursos_component_1.CursosComponent },
+    { path: 'cursos/:nombre', component: cursos_component_1.CursosComponent },
+    { path: 'cursos/:apellidos', component: cursos_component_1.CursosComponent },
     { path: '**', component: home_component_1.HomeComponent }
 ];
 //exportar el modulo del router

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute,Params } from '@angular/router';
 
 @Component({
   selector: 'cursos',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit {
+  //public nombre: string;
+  constructor(
+    private _route: ActivatedRoute,
+    private _router: Router
+  ) { }
 
-  constructor() { }
+  ngOnInit() {
+    this._route.params.subscribe((params : Params)=>{
+      //this.nombre = params.nombre;
+      //this.nombre = params['nombre'];
+      console.log(params);
+    })
+  }
 
-  ngOnInit(): void {
+  redirigir(){
+    this._router.navigate(['/zapatillas']);
   }
 
 }
